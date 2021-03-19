@@ -24,6 +24,7 @@ Route::get('/listarRegistros', function () {
     return view('registros', array('registros' => App\Models\Registro::all()));
 });
 
+
 /*Route::post('/registrar', function (Illuminate\Http\Request $request) {
 
     $registro = new App\Models\Registro();
