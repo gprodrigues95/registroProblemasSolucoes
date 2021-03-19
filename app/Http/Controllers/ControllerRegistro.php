@@ -52,7 +52,7 @@ class ControllerRegistro extends Controller
 
         echo "Seu registro foi armazenado com sucesso! Código: " . $registro->id;
     }
-
+      //Deletar registro
     /*public function destroy($id) {
 
         Registro::findOrFail($id)->delete();
