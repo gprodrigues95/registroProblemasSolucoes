@@ -13,7 +13,7 @@
 
     <div class="container">
 
-        <h1>Detalhe abaixo dados do problema e da solução (caso tenha):</h1>
+        <h1>Detalhe abaixo dados do problema e da solução:</h1>
 
         <hr />
 
