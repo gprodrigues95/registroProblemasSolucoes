@@ -24,6 +24,8 @@ Route::get('/listarRegistros', function () {
     return view('registros', array('registros' => App\Models\Registro::all()));
 });
 
+Route::delete('/registros/{id}', [ControllerRegistro::class, 'destroy']);
+
 
 /*Route::post('/registrar', function (Illuminate\Http\Request $request) {
 

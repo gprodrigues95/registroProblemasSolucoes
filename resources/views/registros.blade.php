@@ -25,6 +25,7 @@
                     <th>Captura de tela do problema</th>
                     <th>Descrição da solução</th>
                     <th>Captura de tela da solução</th>
+                    <th>Ações</th>
                 </tr>
             </thead>
             <tbody>
@@ -35,8 +36,14 @@
                     <td>{{ $row->imgproblema }}</td>
                     <td>{{ $row->txtsolucao }}</td>
                     <td>{{ $row->imgsolucao }}</td>
+                    <td><form action="/registros/{{ $row->id }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                    <button type="submit" class="btn btn-default">Deletar</button>
+                    </form></td>
                 </tr>
                 @endforeach
+                
             </tbody>
         </table>
 
