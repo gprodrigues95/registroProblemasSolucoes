@@ -14,7 +14,9 @@ class AddSubcategoriaIdToRegistrosTable extends Migration
     public function up()
     {
         Schema::table('registros', function (Blueprint $table) {
-            $table->foreignId('subcategoria_id')->constrained();
+            //$table->foreignId('subcategoria_id')->constrained();
+            $table->integer('subcategoria_id')->unsigned();
+            $table->foreign('subcategoria_id')->references('id')->on('subcategoria');
         });
     }
 
@@ -26,8 +28,11 @@ class AddSubcategoriaIdToRegistrosTable extends Migration
     public function down()
     {
         Schema::table('registros', function (Blueprint $table) {
-            $table->foreignId('subcategoria_id')
+           /* $table->foreignId('subcategoria_id')
             ->constrained()
+            ->onDelete('cascade'); */
+            $table->foreign('subcategoria_id')
+            ->references('id')->on('subcategoria')
             ->onDelete('cascade');
         });
     }
