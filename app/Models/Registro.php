@@ -11,4 +11,16 @@ class Registro extends Model
 
     protected $guarded = [];
 
+    public function categoria(){
+
+        return $this->belongsTo('App\Models\Registro');
+
+    }
+
+    public function subcategoria(){
+
+        return $this->belongsTo('App\Models\Registro');
+
+    }
+
 }

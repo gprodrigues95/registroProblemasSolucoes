@@ -46,7 +46,7 @@ class ControllerRegistro extends Controller
             $requestImage->move(public_path('img/solucoes'), $ImageName);
 
             $registro->imgsolucao = $ImageName;
-        }
+        } 
 
         $registro->save();
 
