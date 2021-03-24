@@ -38,14 +38,7 @@
                     <input type="file" id="imgsolucao" name="imgsolucao" class="form-control-file">
                 </p>
             </div>
- 
-            <p><select>
-            <option value="1">Categoria</option>
-            </select></p>
 
-            <p><select>
-            <option value="1">Subcategoria</option>
-            </select></p>
 
             <button type="submit" class="btn btn-default">Registrar</button>
 

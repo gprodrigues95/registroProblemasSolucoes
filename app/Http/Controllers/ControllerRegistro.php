@@ -60,4 +60,5 @@ class ControllerRegistro extends Controller
         echo "Seu registro foi deletado com sucesso!";
         
     }
+
 }

@@ -13,6 +13,7 @@ public function registros(){
 
     return $this->hasMany('App\Models\Registro');
 
+
 }
 
 

@@ -12,6 +12,7 @@ class SubCategoria extends Model
 public function registros(){
 
     return $this->hasMany('App\Models\Registro');
+
   
 }
     
