@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categoria;
 use Illuminate\Http\Request;
 
 use App\Models\Registro;
@@ -46,19 +47,18 @@ class ControllerRegistro extends Controller
             $requestImage->move(public_path('img/solucoes'), $ImageName);
 
             $registro->imgsolucao = $ImageName;
-        } 
+        }
 
         $registro->save();
 
         echo "Seu registro foi armazenado com sucesso! Código: " . $registro->id;
     }
 
-    public function destroy($id) {
+    public function destroy($id)
+    {
 
         Registro::findOrFail($id)->delete();
 
         echo "Seu registro foi deletado com sucesso!";
-        
     }
-
 }
