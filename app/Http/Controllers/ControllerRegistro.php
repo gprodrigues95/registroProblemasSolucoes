@@ -6,6 +6,7 @@ use App\Models\Categoria;
 use Illuminate\Http\Request;
 
 use App\Models\Registro;
+use App\Models\SubCategoria;
 
 class ControllerRegistro extends Controller
 {
@@ -61,4 +62,21 @@ class ControllerRegistro extends Controller
 
         echo "Seu registro foi deletado com sucesso!";
     }
+
+    public function create(Request $request)
+    {
+
+        $categorias = new Categoria; // Nesta linha, foi instanciada a classe "Categoria" do nosso Model
+        $sub_categorias = new SubCategoria; // Nesta linha, foi instanciada a classe "SubCategoria" do nosso Model
+
+        $categorias->catdescricao = $request->get('catdescricao');
+        $sub_categorias->subdescricao = $request->get('subdescricao');
+
+        $categorias->save();
+        $sub_categorias->save();
+
+        echo "Nova categoria e subcategoria adicionadas com sucesso!";
+
+    }
+
 }

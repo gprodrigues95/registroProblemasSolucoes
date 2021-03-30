@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddCategoriaIdToRegistrosTable extends Migration
+class AddCategoriasIdToRegistrosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,8 +15,8 @@ class AddCategoriaIdToRegistrosTable extends Migration
     {
         Schema::table('registros', function (Blueprint $table) {
             //$table->foreignId('categoria_id')->constrained();
-            $table->integer('categoria_id')->unsigned();
-            $table->foreign('categoria_id')->references('id')->on('categoria');
+            $table->integer('categorias_id')->unsigned();
+            $table->foreign('categorias_id')->references('id')->on('categorias');
         });
     }
 
@@ -31,8 +31,8 @@ class AddCategoriaIdToRegistrosTable extends Migration
             /* $table->foreignId('categoria_id')
             ->constrained()
             ->onDelete('cascade'); */
-            $table->foreign('categoria_id')
-            ->references('id')->on('categoria')
+            $table->foreign('categorias_id')
+            ->references('id')->on('categorias')
             ->onDelete('cascade');
         });
     }

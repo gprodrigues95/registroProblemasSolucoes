@@ -18,52 +18,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/registrar', [ControllerRegistro::class, 'store']); //store envia dados pro BD
+Route::post('/registrar', [ControllerRegistro::class, 'store']); //armazena o registro do problema no BD
 
 Route::get('/listarRegistros', function () {
-    return view('registros', array('registros' => App\Models\Registro::all()));
+    return view('registros', array('registros' => App\Models\Registro::all())); //lista os registros de problemas cadastrados no BD 
 });
 
-Route::delete('/registros/{id}', [ControllerRegistro::class, 'destroy']);
+Route::delete('/registros/{id}', [ControllerRegistro::class, 'destroy']); //deleta o registro do problema do BD
 
+Route::post('/cadastrar', [ControllerRegistro::class, 'create']); //cadastra uma nova categoria e subcategoria no BD
 
-/*Route::post('/registrar', function (Illuminate\Http\Request $request) {
-
-    $registro = new App\Models\Registro();
-    $registro->txtproblema = $request->get('txtproblema');
-    $registro->imgproblema = $request->get('imgproblema');
-    $registro->txtsolucao = $request->get('txtsolucao');
-    $registro->imgsolucao = $request->get('imgsolucao');
-
-    //Image Upload (trecho de código responsável por receber as imagens do formulário e enviar pro BD).
-    //As imagens são salvas no BD com um nome diferente do nome original delas.
-    if ($request->hasFile('imgproblema') && $request->file('imgproblema')->isValid()) {
-
-        $requestImage = $request->imgproblema;
-
-        $extension = $requestImage->extension();
-
-        $ImageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
-
-        $requestImage->move(public_path('img/problemas'), $ImageName);
-
-        $registro->imgproblema = $ImageName;
-    }
-
-    if ($request->hasFile('imgsolucao') && $request->file('imgsolucao')->isValid()) {
-
-        $requestImage = $request->imgsolucao;
-
-        $extension = $requestImage->extension();
-
-        $ImageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
-
-        $requestImage->move(public_path('img/solucoes'), $ImageName);
-
-        $registro->imgsolucao = $ImageName;
-    }
-
-    $registro->save();
-
-    echo "Seu registro foi armazenado com sucesso! Código: " . $registro->id;
-});*/
+Route::get('/cadastroCatSub', function () {
+    return view('cadastroCategoriaAndSub');
+});
