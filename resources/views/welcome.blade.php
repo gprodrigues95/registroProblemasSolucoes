@@ -41,8 +41,25 @@
                 </p>
             </div>
 
+            <p>Selecione a categoria a qual o erro pertence:
+                <select>
+                    <option>Categoria</option>
+                </select>
+            </p>
 
-            <button type="submit" class="btn btn-default">Registrar</button>
+            <p>Selecione a subcategoria a qual o erro pertence:
+                <select>
+                    <option>Subcategoria</option>
+                </select>
+            </p>
+
+            <p>Não encontrou categoria e subcategoria adequadas? <a href="/cadastroCatSub">Clique aqui</a></p>
+
+            <p><button type="submit" class="btn btn-default">Registrar</button></p>
+
+            <p>
+            <h3><a href="/listarRegistros">Lista de registros</a></h3>
+            </p>
 
         </form>
 

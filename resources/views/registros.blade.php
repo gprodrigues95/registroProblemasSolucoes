@@ -38,16 +38,22 @@
                     <td>{{ $row->imgproblema }}</td>
                     <td>{{ $row->txtsolucao }}</td>
                     <td>{{ $row->imgsolucao }}</td>
-                    <td><form action="/registros/{{ $row->id }}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                    <button type="submit" class="btn btn-default">Deletar</button>
-                    </form></td>
+                    <td>
+                        <form action="/registros/{{ $row->id }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-default">Deletar</button>
+                        </form>
+                    </td>
                 </tr>
                 @endforeach
-                
+
             </tbody>
         </table>
+
+        <p>
+        <h3><a href="/">Adicionar um novo registro</a></h3>
+        </p>
 
     </div>
 

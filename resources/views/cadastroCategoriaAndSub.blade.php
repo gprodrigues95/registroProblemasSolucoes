@@ -15,7 +15,7 @@
 
     <div class="container">
 
-        <h1>Descreva abaixo a categoria e subcategoria:</h1>
+        <h1>Cadastre abaixo a categoria e subcategoria:</h1>
 
         <hr />
 
@@ -24,17 +24,21 @@
 
             <div class="form-group">
                 <p><label for="texto01">Descrição da categoria:</label>
-                <textarea id="catdescricao" name="catdescricao" class="form-control" placeholder="Por exemplo: Erro no GitHub"></textarea>
-                </p> 
-            </div>
-            
-            <div class="form-group">
-                <p><label for="texto02">Descrição da subcategoria:</label>
-                <textarea id="subdescricao" name="subdescricao" class="form-control" placeholder="Por exemplo: Erro de Push"></textarea>
-                </p>            
+                    <textarea id="catdescricao" name="catdescricao" class="form-control" placeholder="Por exemplo: Erro no GitHub"></textarea>
+                </p>
             </div>
 
-            <button type="submit" class="btn btn-default">Cadastrar</button>
+            <div class="form-group">
+                <p><label for="texto02">Descrição da subcategoria:</label>
+                    <textarea id="subdescricao" name="subdescricao" class="form-control" placeholder="Por exemplo: Erro de Push"></textarea>
+                </p>
+            </div>
+
+            <p><button type="submit" class="btn btn-default">Cadastrar</button></p>
+
+            <p>
+            <h3><a href="/">Voltar</a></h3>
+            </p>
 
         </form>
 
