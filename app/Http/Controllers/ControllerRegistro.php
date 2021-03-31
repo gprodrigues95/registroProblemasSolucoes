@@ -79,4 +79,20 @@ class ControllerRegistro extends Controller
 
     }
 
+    public function destroyCategoria($id)
+    {
+
+        Categoria::findOrFail($id)->delete();
+
+        echo "A categoria foi deletada com sucesso!";
+    }
+
+    public function destroySubCategoria($id)
+    {
+
+        SubCategoria::findOrFail($id)->delete();
+
+        echo "A subcategoria foi deletada com sucesso!";
+    }
+
 }

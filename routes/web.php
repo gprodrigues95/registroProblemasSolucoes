@@ -31,3 +31,15 @@ Route::post('/cadastrar', [ControllerRegistro::class, 'create']); //cadastra uma
 Route::get('/cadastroCatSub', function () {
     return view('cadastroCategoriaAndSub');
 });
+
+Route::get('/listarCategorias', function () {
+    return view('categorias', array('categorias' => App\Models\Categoria::all()));
+});
+
+Route::get('/listarSubCategorias', function () {
+    return view('subCategorias', array('subCategorias' => App\Models\SubCategoria::all()));
+});
+
+Route::delete('/categorias/{id}', [ControllerRegistro::class, 'destroyCategoria']);
+
+Route::delete('/subCategorias/{id}', [ControllerRegistro::class, 'destroySubCategoria']);

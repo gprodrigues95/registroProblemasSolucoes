@@ -37,6 +37,14 @@
             <p><button type="submit" class="btn btn-default">Cadastrar</button></p>
 
             <p>
+            <h3><a href="/listarCategorias">Categorias cadastradas</a></h3>
+            </p>
+
+            <p>
+            <h3><a href="/listarSubCategorias">Subcategorias cadastradas</a></h3>
+            </p>
+            
+            <p>
             <h3><a href="/">Voltar</a></h3>
             </p>
 
